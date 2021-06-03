@@ -1,24 +1,34 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  | Column                | type   | Options                   |
+  | --------------------- | ------ | ------------------------- |
+  | nickname              | string | null: false               |
+  | email                 | string | null: false, unique: true |
+  | encrypted_password    | string | null: false               |
+  | birthday              | date   | null: false               |
 
-Things you may want to cover:
+### Association
+  has_many :comments<br>
+  has_many :comics
 
-* Ruby version
+## comics テーブル
 
-* System dependencies
+  | Column                | type       | Options                        |
+  | --------------------- | ---------- | ------------------------------ |
+  | title                 | string     | null: false                    |
+  | genre                 | string     | null: false                    |
+  | user                  | references | null: false, foreign_key: true |
+### Association
+  has_many   :comments<br>
+  belong_to :user
 
-* Configuration
+## likes テーブル
 
-* Database creation
+  | Column                | type       | Options                            |
+  | --------------------- | ---------- | ---------------------------------- |
+  | user                  | references | null: false, foreign_key: true     |
+  | comic                 | references | null: false, foreign_key: true     |
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+  belong_to :user<br>
+  belong_to :comic

@@ -1,0 +1,82 @@
+<%# <%= render "shared/header" %> 
+<div class='main'>
+
+  <%# 画面上部の帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      漫画保管庫にようこそ！！
+    </h2>
+    <p class='service-explain'>
+      漫画保管庫では自分の好きな漫画を投稿し、
+    </p>
+    <p class='service-explain'>
+      確認できるアプリです！
+    </p>
+  </div>
+  <%# /画面上部の帯部分  %>
+
+  <%# 特徴部分 %>
+  <div class='feature-contents'>
+    <h2 class='subtitle'>
+      漫画保管庫の特徴
+    </h2>
+    <ul class='feature-lists'>
+      <li class='subtitle-list'>
+        <%# <%= image_tag "upload1.png", class:"list-pict" %> 
+        <h3 class='feature-list-text'>
+          自分の好きな漫画を投稿しよう！
+        </h3>
+        <p class='feature-list-descripion'>
+          漫画を投稿して視覚的に好きな漫画を保存しよう！
+        </p>
+      </li>
+      <li class='subtitle-list'>
+        <%# <%= image_tag "like-icon1.png", class:"list-pict" %> 
+        <h3 class='feature-list-text'>
+          他ユーザーの投稿にいいねしよう！
+        </h3>
+        <p class='feature-list-description'>
+          他ユーザーの投稿に良さげな漫画があればいいねして保存しよう！
+        </p>
+      </li>
+      <li class='subtitle-list'>
+        <%# <%= image_tag "toukou1.png", class:"list-pict" %> 
+        <h3 class='feature-list-text'>
+          いいねしてマイページに残そう！
+        </h3>
+        <p class='feature-list-description'>
+          いいねする事でマイページに気になる他の漫画を保存する事ができる！
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /特徴部分 %>
+
+  <%# 作品一覧 %>
+  <div class='comic-contents'>
+    <h2 class='title'>漫画集積所</h2>
+    <ul class='comic-lists'>
+
+      <%# <% @comics.each do |comic| %> 
+      <li class='list'>
+        <%# <%= link_to comic_path (comic.id) do %> 
+          <div class='comic-img-content'>
+            <%# <%= image_tag comic.image, class: "comic-img" %> 
+            <div class='comic-info'>
+              <h3 class='comic-title'>
+                <%# <%= comic.title %> 
+              </h3>
+              <div class="like-count">
+                <%# <span>いいね数:</span><%= comic.liked_users.count %> 
+              </div>
+          </div>
+        <%# <% end %> 
+      </li>
+       
+      <%# <% end %> 
+
+    </ul>
+  </div>
+</div>
+
+<%# <%= render "shared/footer" %> 

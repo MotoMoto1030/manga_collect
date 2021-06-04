@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+
+<div class="mypage">
+  <p><%= @nickname %>さんの漫画一覧</p>
+
+  <% @comics.each do |comic| %>
+      <li class='list'>
+        <div class='comic-img-content'>
+          <%= image_tag comic.image, class: "comic-img" %>
+          <div class='comic-info'>
+            <h3 class='comic-title'>
+              <%= comic.title %>
+            </h3>
+          </div>
+      </li>
+      <% end %>
+
+  <%=link_to 'Topページにもどる', root_path, class:"back-btn" %>

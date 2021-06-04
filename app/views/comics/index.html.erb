@@ -59,7 +59,7 @@
 
       <% @comics.each do |comic| %> 
       <li class='list'>
-        <%# <%= link_to comic_path (comic.id) do %> 
+        <%= link_to comic_path (comic.id) do %> 
           <div class='comic-img-content'>
             <%= image_tag comic.image.variant(resize: '325x325'), class: "comic-img" %> 
             <div class='comic-info'>
@@ -70,7 +70,7 @@
                 <%# <span>いいね数:</span><%= comic.liked_users.count %> 
               </div>
           </div>
-        <%# <% end %> 
+        <% end %> 
       </li>
       <% end %> 
       <% if @comics.length == 0 %>

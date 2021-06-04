@@ -16,6 +16,14 @@ class ComicsController < ApplicationController
     end
   end
 
+    def show
+      if user_signed_in?
+      @comic = Comic.find(params[:id])
+      else
+        redirect_to root_path
+      end
+    end
+
   private
 
   def comic_params

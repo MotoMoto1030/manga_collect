@@ -57,14 +57,14 @@
     <h2 class='title'>漫画集積所</h2>
     <ul class='comic-lists'>
 
-      <%# <% @comics.each do |comic| %> 
+      <% @comics.each do |comic| %> 
       <li class='list'>
         <%# <%= link_to comic_path (comic.id) do %> 
           <div class='comic-img-content'>
-            <%# <%= image_tag comic.image, class: "comic-img" %> 
+            <%= image_tag comic.image.variant(resize: '325x325'), class: "comic-img" %> 
             <div class='comic-info'>
               <h3 class='comic-title'>
-                <%# <%= comic.title %> 
+                <%= comic.title %> 
               </h3>
               <div class="like-count">
                 <%# <span>いいね数:</span><%= comic.liked_users.count %> 
@@ -72,9 +72,15 @@
           </div>
         <%# <% end %> 
       </li>
-       
-      <%# <% end %> 
-
+      <% end %> 
+      <% if @comics.length == 0 %>
+      <li class='list'>
+        <p>
+          まだ一つも投稿されていません。
+        </p>
+        <div class='item-info'>
+      </li>
+      <% end %>
     </ul>
   </div>
 </div>

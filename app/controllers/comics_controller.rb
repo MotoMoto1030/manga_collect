@@ -1,5 +1,6 @@
 class ComicsController < ApplicationController
   def index
+    @comics = Comic.all.order(id: 'DESC')
   end
 
   def new

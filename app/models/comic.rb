@@ -1,5 +1,5 @@
 class Comic < ApplicationRecord
-  belong_to :user
+  belongs_to :user
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
@@ -9,5 +9,4 @@ class Comic < ApplicationRecord
 
   #ジャンルの選択が「--」の時は保存できないようにする
   validates :genre_id, numericality: { other_than: 1 } 
-end
 end

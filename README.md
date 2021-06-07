@@ -37,8 +37,8 @@ Ruby,HTML,CSS,Github
   | birthday              | date   | null: false               |
 
 ### Association
-  has_many :comments<br>
-  has_many :comics
+  has_many :comics<br>
+  has_many :likes
 
 ## comics テーブル
 
@@ -48,7 +48,7 @@ Ruby,HTML,CSS,Github
   | genre                 | string     | null: false                    |
   | user                  | references | null: false, foreign_key: true |
 ### Association
-  has_many   :comments<br>
+  has_many   :likes<br>
   belong_to :user
 
 ## likes テーブル

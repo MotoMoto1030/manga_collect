@@ -26,6 +26,7 @@ Ruby,HTML,CSS,Github
 ・javascriptを用いたビューの編集<br>
 ・一つの漫画にコメントし合うコメント機能<br>
 ・投稿した漫画の検索機能<br>
+・足りていないビューの整形
 
 
 ## users テーブル

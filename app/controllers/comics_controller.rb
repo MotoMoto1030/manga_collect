@@ -24,6 +24,10 @@ class ComicsController < ApplicationController
       end
     end
 
+    def search
+      @comics = Comic.search(params[:keyword])
+    end
+
   private
 
   def comic_params

@@ -3,6 +3,15 @@ class Comic < ApplicationRecord
   has_one_attached :image
   has_many :likes
   has_many :liked_users, through: :likes, source: :user
+
+  def self.search(search)
+    if search != ""
+      Comic.where('title LIKE(?)', "%#{search}%")
+    else
+      Comic.all
+    end
+  end
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
 

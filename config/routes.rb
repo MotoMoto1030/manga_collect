@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :comics, only: [:index, :new, :create, :show] do
     resources :likes, only: [:create, :destroy]
+    collection do
+      get 'search'
+    end
   end
 end

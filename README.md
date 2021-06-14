@@ -20,7 +20,7 @@
 ・投稿した漫画を検索する検索機能を実装。
 
 ###### 使用技術<br>
-Ruby,HTML,CSS,Github
+Ruby,HTML,CSS,Github,AWS(予定)
 
 ## 今後の実装
 ・AWSを用いた画像アップロード<br>

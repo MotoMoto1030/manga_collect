@@ -1,8 +1,12 @@
 h1 {
   padding: 10px 0;
   margin: 0;
-  text-shadow: 0 0 5px rgba(77, 72, 72, 0.9);
+}
+
+.web-title {
   color: rgb(41, 31, 31);
+  text-shadow: 0 0 5px rgba(77, 72, 72, 0.9);
+  text-decoration: none;
 }
 
 ul,li {

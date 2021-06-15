@@ -1,33 +1,43 @@
 <%= render "shared/header" %>
 
-<div class="mypage">
-  <p><%= @nickname %>さんの漫画一覧</p>
+<div class="upload-my-manga">
+  <p class='my-manga-name'>
+    <%= @nickname %>さんの投稿した漫画一覧
+  </p>
+  <ul class='comic-lists' >
 
-  <% @comics.each do |comic| %>
+    <% @comics.each do |comic| %>
       <li class='list'>
         <div class='comic-img-content'>
-          <%= image_tag comic.image, class: "comic-img" %>
+          <%= image_tag comic.image.variant(resize: '325x325'), class: "comic-img" %>
           <div class='comic-info'>
             <h3 class='comic-title'>
               <%= comic.title %>
             </h3>
           </div>
       </li>
-      <% end %>
+    <% end %>
+  </ul>
+</div>
 
-  <p><%= @nickname %>さんがいいねした漫画一覧</p>
+<div class="likes-my-manga" >
+  <p class='my-manga-name'>
+    <%= @nickname %>さんがいいねした漫画一覧
+  </p>
+  <ul class='comic-lists' >
 
       <% @users.each do |user| %>
         <% user.liked_comics.each do |comic| %>
-          <% if current_user.already_liked?(comic) %>
-            <%= image_tag comic.image, class: "comic-img" %>
-            <h3 class='comic-title'>
-              <%= comic.title %>
-            </h3>
-          <% else %>
-            <%=link_to 'あなたはまだいいねしてません！探しにいきましょう！', root_path, class:"back-btn" %>
-          <% end %>
+            <li class='list'>
+              <div class='comic-img-content'>
+                <%= image_tag comic.image.variant(resize: '325x325'), class: "comic-img" %>
+                <h3 class='comic-title'>
+                  <%= comic.title %>
+                </h3>
+              </div>
+            </li>
         <% end %>
       <% end %>
 
-  <%=link_to 'Topページにもどる', root_path, class:"back-btn" %>
+  </ul>
+</div>

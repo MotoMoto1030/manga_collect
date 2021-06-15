@@ -1,0 +1,23 @@
+.search-contents {
+  background-color: rgb(255, 255, 255);
+}
+
+.comic-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comic-lists>.list {
+  width: 50vh;
+}
+
+.comic-img-content {
+  position: relative;
+}
+
+.comic-img {
+  width: 40%;
+  height: 30%;
+}

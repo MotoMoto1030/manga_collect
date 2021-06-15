@@ -1,6 +1,8 @@
 <%= render "shared/header" %> 
 
-<div class="contents row">
+<div class="search-contents">
+  <ul class='comic-lists' >
+
   <% @comics.each do |comic| %>
     <li class='list'>
         <%= link_to comic_path (comic.id) do %> 
@@ -17,4 +19,13 @@
         <% end %> 
       </li>
   <% end %>
+  <% if @comics.length == 0 %>
+      <li class='list'>
+        <p>
+          まだ一つも投稿されていません。
+        </p>
+        <div class='item-info'>
+      </li>
+  <% end %>
+  </ul>
 </div>

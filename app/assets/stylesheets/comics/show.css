@@ -1,0 +1,12 @@
+.show-title-comic {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.show-comic-img-content {
+  display: flex;
+  justify-content: center;
+}
+
+

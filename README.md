@@ -1,3 +1,5 @@
+![漫画保管庫](mangacollect-sample1.jpg)
+
 # 漫画保管庫<br>
 
 ## 概要<br>

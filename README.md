@@ -28,7 +28,8 @@ Ruby,HTML,CSS,Github,AWS S3
 ・javascriptを用いたビューの編集<br>
 ・一つの漫画にコメントし合うコメント機能<br>
 ・足りていないビューの整形(ログイン及びサインイン画面を特に)<br>
-・viewportの整形
+・viewportの整形<br>
+・携帯の対応
 
 
 ## users テーブル

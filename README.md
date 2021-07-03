@@ -25,7 +25,7 @@
 Ruby,HTML,CSS,Github,AWS S3
 
 ## 今後の実装
-・javascriptを用いたビューの整形<br>
+・javascriptを用いたビューの作成<br>
 ・一つの漫画にコメントできるコメント機能<br>
 ・足りていないビューの整形(ログイン及びサインイン画面を特に)<br>
 ・viewportの整形<br>
